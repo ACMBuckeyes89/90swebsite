@@ -1,0 +1,134 @@
+.container {  display: grid;
+    grid-template-columns: 0.6fr 2fr 0.4fr;
+    grid-template-rows: 0.7fr 1.3fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Batman-Logo Batman-Logo Batman-Logo"
+      "Batman-L Batman-History Batman-R"
+      "Batman-L Batman-Video Batman-R";
+  } 
+  
+.Batman-L {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "BL1 BL1 BL1"
+      "BL2 BL2 BL2"
+      "BL3 BL3 BL3";
+    grid-area: Batman-L;
+  }
+  
+  .BL1 { grid-area: BL1; }
+  
+  .BL2 { grid-area: BL2; }
+  
+  .BL3 { grid-area: BL3; }
+  
+  .Batman-R {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "BR1 BR1 BR1"
+      "BR2 BR2 BR2"
+      "BR3 BR3 BR3";
+    grid-area: Batman-R;
+  }
+  
+  .BR1 { 
+    grid-area: BR1;
+    background-color: black; 
+    border-radius: 10px;
+    text-align: center;
+}
+  
+  .BR2 { grid-area: BR2; }
+  
+  .BR3 { grid-area: BR3; } */
+
+  .Batman-History { grid-area: Batman-History; }
+  
+  .Batman-Video { 
+    grid-area: Batman-Video; 
+    background-image: url(pics/hahaha.png);
+    background-repeat: repeat-x; 
+    max-height: fit-content; 
+    margin-top: 70px;
+    opacity: 0.4; 
+
+}
+  
+  .Batman-Logo { 
+    justify-self: center; 
+    align-self: stretch; 
+    grid-area: Batman-Logo;
+    /*background-image: url(pics/the-batman.png);
+    background-size: cover; */ 
+}
+
+  body {
+    background-image: url(pics/gotham-city.jpeg);
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center bottom;
+  }
+
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+} 
+@-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  #batman {
+    opacity: 0.3;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  }
+
+  .enemies {
+    opacity: 0.5;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  h1 {
+    font-family: 'Black Ops One', cursive;
+    color: rgb(192, 0, 0);
+    text-align: center;
+    font-size: 50px;
+  }
+
+  pre {
+    font-family: 'Creepster', cursive;
+    color: rgb(192, 0, 0);
+    text-align: center;
+    font-size: 20px;
+    line-height: 2;
+    background-color: black;
+    border-radius: 50px;
+  }
+  
+  .laugh {
+    background-repeat: repeat-y;
+    max-width: 1000px;
+    max-height: 100%;
+  }
+
+  .support {
+    font-family: 'Black Ops One', cursive;
+    color: rgb(192, 0, 0);
+  }
+
+  .store {
+    font-family: 'Creepster', cursive;
+    color: rgb(192, 0, 0);
+    text-align: left;
+  }
